@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./js/jquery-ui.css">
+</head>
+
+<body>
+  <!-- 结构的要求1 ： 使用一个大盒子把所有的tab栏用到的元素都包起来 -->
+  <div id="tabs">
+    <!-- 结构要求2： 准备一个 多个标签的分类 -->
+    <ul>
+      <!-- ul的要求，li里面放a标签，a标签的href指向它对应的内容的容器 -->
+      <li><a href="#tabs-1">Nunc tincidunt</a></li>
+      <li><a href="#tabs-2">Proin dolor</a></li>
+      <li><a href="#tabs-3">Aenean lacinia</a></li>
+    </ul>
+    <!-- 1.内容的个数要和li的个数对应，id要是a标签的href一样 -->
+    <div id="tabs-1">
+      <p>Proin elit arcu,1</p>
+    </div>
+    <div id="tabs-2">
+      <p>Proin elit arcu,2</p>
+    </div>
+    <div id="tabs-3">
+      <p>Proin elit arcu,3</p>
+    </div>
+  </div>
+
+</body>
+<script src="./js/jquery-2.2.2.js"></script>
+<script src="./js/jquery-ui.js"></script>
+<script>
+  /*
+    有时候，如果每次实现一个效果，就需要引入一个额外的js文件，如果在页面中效果非常多的时候，可能需要引入非常多的插件
+    有人(团队)把一些常用的UI的效果，整合到一起，UI框架(类库)
+
+    jquery.ui.js - jq官方维护的一些常见的页面功能效果
+
+    https://jqueryui.com/
+    步骤和以前的其他插件一样，只需要下载，引入，看文档使用
+  */
+
+// 使用jqueryui实现一个tab栏
+// 引入一些必要的文件： jquery.ui.css  jquery.js  jquery.ui.js
+// 第二步： 按照指定的要求，写一个结构
+// 第三步： 调用jquery.ui.js里面提供的方法，把tab栏初始化
+$( "#tabs" ).tabs();
+</script>
+
+</html>
